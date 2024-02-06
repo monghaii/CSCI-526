@@ -25,12 +25,25 @@ public class TextFeed : MonoBehaviour
     public void DisplayNextDialogue(int option)
     {
         Debug.Log("pressed " + option);
-        // select the next dialogue node
-        currentDialogue = currentDialogue.options[option].response;
-        dialogueText.text = currentDialogue.dialogueText;
-        option1.text = currentDialogue.options[0].optionText;
-        option2.text = currentDialogue.options[1].optionText;
-        option3.text = currentDialogue.options[2].optionText;
-        option4.text = currentDialogue.options[3].optionText;
+        if (currentDialogue.options[option].isWinningChoice)
+        {
+            Debug.Log("IS WINNING CHOICE");
+        } else if (currentDialogue.options[option].triggersFPS)
+        {
+            Debug.Log("FPS TRIGGERED");
+        } else if (currentDialogue.options[option].causesRelationship)
+        {
+            Debug.Log("RELATIONSHIP CAUSED");
+        }
+        else
+        {
+            // select the next dialogue node
+            currentDialogue = currentDialogue.options[option].response;
+            dialogueText.text = currentDialogue.dialogueText;
+            option1.text = currentDialogue.options[0].optionText;
+            option2.text = currentDialogue.options[1].optionText;
+            option3.text = currentDialogue.options[2].optionText;
+            option4.text = currentDialogue.options[3].optionText;
+        }
     }
 }

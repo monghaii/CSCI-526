@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2cdf6271dea47f0a864825fab438f3, type: 3}
+  m_Name: play tag during recess
+  m_EditorClassIdentifier: 
+  dialogueText: okay.. well did you want to play tag during recess?
+  options:
+  - optionText: I said go away.
+    response: {fileID: 0}
+    isFatal: 0
+  - optionText: maybe...
+    response: {fileID: 0}
+    isFatal: 0
+  - optionText: okay, sure!
+    response: {fileID: 0}
+    isFatal: 0
+  - optionText: I'd love to!
+    response: {fileID: 0}
+    isFatal: 0

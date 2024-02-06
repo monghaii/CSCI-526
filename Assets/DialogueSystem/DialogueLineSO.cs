@@ -15,5 +15,7 @@ public class DialogueOption
 {
     public string optionText;
     public DialogueLineSO response;
-    public bool isFatal;
+    public bool triggersFPS;
+    public bool isWinningChoice;
+    public bool causesRelationship;
 }
