@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2cdf6271dea47f0a864825fab438f3, type: 3}
+  m_Name: Response 1
+  m_EditorClassIdentifier: 
+  dialogueText: This is option one
+  options:
+  - optionText: option one
+    response: {fileID: 0}
+    isFatal: 0
+  - optionText: option two
+    response: {fileID: 0}
+    isFatal: 0
+  - optionText: option three
+    response: {fileID: 0}
+    isFatal: 0
+  - optionText: option four
+    response: {fileID: 0}
+    isFatal: 0

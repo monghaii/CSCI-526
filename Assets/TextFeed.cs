@@ -24,6 +24,7 @@ public class TextFeed : MonoBehaviour
 
     public void DisplayNextDialogue(int option)
     {
+        Debug.Log("pressed " + option);
         // select the next dialogue node
         currentDialogue = currentDialogue.options[option].response;
         dialogueText.text = currentDialogue.dialogueText;
