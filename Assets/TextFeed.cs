@@ -4,39 +4,32 @@ using UnityEngine.UIElements;
 
 public class TextFeed : MonoBehaviour
 {
-    public TextMeshProUGUI textMeshPro;
-    [SerializeField] public Button option1;
-    [SerializeField] public Button option2;
-    [SerializeField] public Button option3;
-    [SerializeField] public Button option4;
-    public DialogueLineSO baseDialogue;
-    public string[] dialogueLines;
+    public TextMeshProUGUI dialogueText;
+    [SerializeField] public TextMeshProUGUI option1;
+    [SerializeField] public TextMeshProUGUI option2;
+    [SerializeField] public TextMeshProUGUI option3;
+    [SerializeField] public TextMeshProUGUI option4;
+    public DialogueLineSO currentDialogue;
     private int currentLineIndex = 0;
 
     private void Awake()
     {
-        Debug.Log(baseDialogue.dialogueText);
+        Debug.Log(currentDialogue.dialogueText);
+        option1.text = currentDialogue.options[0].optionText;
+        option2.text = currentDialogue.options[1].optionText;
+        option3.text = currentDialogue.options[2].optionText;
+        option4.text = currentDialogue.options[3].optionText;
+        dialogueText.text = currentDialogue.dialogueText;
     }
 
-    public void DisplayNextDialogue(bool transitionToFPS = false)
+    public void DisplayNextDialogue(int option)
     {
-        if (currentLineIndex < dialogueLines.Length)
-        {
-            string nextLine = dialogueLines[currentLineIndex];
-            currentLineIndex++;
-
-            if (transitionToFPS && nextLine.Equals("Special Dialogue"))
-            {
-                Debug.Log("TRANSITIONING TO FPS.");
-            }
-            else
-            {
-                textMeshPro.text = nextLine;
-            }
-        }
-        else
-        {
-            Debug.Log("No more dialogue lines to display.");
-        }
+        // select the next dialogue node
+        currentDialogue = currentDialogue.options[option].response;
+        dialogueText.text = currentDialogue.dialogueText;
+        option1.text = currentDialogue.options[0].optionText;
+        option2.text = currentDialogue.options[1].optionText;
+        option3.text = currentDialogue.options[2].optionText;
+        option4.text = currentDialogue.options[3].optionText;
     }
 }
