@@ -14,15 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: okay.. well did you want to play tag during recess?
   options:
-  - optionText: I said go away.
+  - optionText: GO AWAY.
     response: {fileID: 0}
-    isFatal: 0
-  - optionText: maybe...
+    triggersFPS: 1
+    isWinningChoice: 0
+    causesRelationship: 0
+  - optionText: Maybe...
+    response: {fileID: 11400000, guid: c41db11ff2e9549a68977f820cb7d322, type: 2}
+    triggersFPS: 0
+    isWinningChoice: 0
+    causesRelationship: 0
+  - optionText: Sorry, I have diarrhea.
     response: {fileID: 0}
-    isFatal: 0
-  - optionText: okay, sure!
-    response: {fileID: 0}
-    isFatal: 0
+    triggersFPS: 0
+    isWinningChoice: 1
+    causesRelationship: 0
   - optionText: I'd love to!
     response: {fileID: 0}
-    isFatal: 0
+    triggersFPS: 0
+    isWinningChoice: 0
+    causesRelationship: 1

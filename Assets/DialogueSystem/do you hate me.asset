@@ -16,13 +16,21 @@ MonoBehaviour:
   options:
   - optionText: Yes. You literally won't stop talking to me. STOP.
     response: {fileID: 0}
-    isFatal: 1
-  - optionText: option two
-    response: {fileID: 0}
-    isFatal: 0
-  - optionText: option three
-    response: {fileID: 0}
-    isFatal: 0
+    triggersFPS: 1
+    isWinningChoice: 0
+    causesRelationship: 0
+  - optionText: ehhhh
+    response: {fileID: 11400000, guid: c41db11ff2e9549a68977f820cb7d322, type: 2}
+    triggersFPS: 0
+    isWinningChoice: 0
+    causesRelationship: 0
+  - optionText: define "hate"...
+    response: {fileID: 11400000, guid: c41db11ff2e9549a68977f820cb7d322, type: 2}
+    triggersFPS: 0
+    isWinningChoice: 0
+    causesRelationship: 0
   - optionText: No, sorry! I just have something on my mind!
     response: {fileID: 11400000, guid: e41166871cdd549e088eec15ad3f11bb, type: 2}
-    isFatal: 0
+    triggersFPS: 0
+    isWinningChoice: 0
+    causesRelationship: 0

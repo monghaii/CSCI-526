@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine.UIElements;
 
 public class TextFeed : MonoBehaviour
@@ -9,6 +10,11 @@ public class TextFeed : MonoBehaviour
     [SerializeField] public TextMeshProUGUI option2;
     [SerializeField] public TextMeshProUGUI option3;
     [SerializeField] public TextMeshProUGUI option4;
+    [SerializeField] public GameObject survivedScreen;
+    [SerializeField] public GameObject failedScreen;
+    
+    
+    
     public DialogueLineSO currentDialogue;
     private int currentLineIndex = 0;
 
@@ -24,16 +30,32 @@ public class TextFeed : MonoBehaviour
 
     public void DisplayNextDialogue(int option)
     {
-        Debug.Log("pressed " + option);
+        if (option1.text == "Oh no." &&
+            option2.text == "Oh no." &&
+            option3.text == "Oh no." &&
+            option4.text == "Oh no.")
+        {
+            // TRIGGER FPS HERE
+            Debug.Log("FPS TRIGGERED");
+        }
+        
         if (currentDialogue.options[option].isWinningChoice)
         {
             Debug.Log("IS WINNING CHOICE");
-        } else if (currentDialogue.options[option].triggersFPS)
+            survivedScreen.gameObject.SetActive(true);
+        }
+        else if (currentDialogue.options[option].triggersFPS)
         {
-            Debug.Log("FPS TRIGGERED");
-        } else if (currentDialogue.options[option].causesRelationship)
+            dialogueText.text = "THAT'S IT!!!!!!";
+            option1.text = "Oh no.";
+            option2.text = "Oh no.";
+            option3.text = "Oh no.";
+            option4.text = "Oh no.";
+        }
+        else if (currentDialogue.options[option].causesRelationship)
         {
             Debug.Log("RELATIONSHIP CAUSED");
+            failedScreen.gameObject.SetActive(true);
         }
         else
         {
