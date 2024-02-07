@@ -38,8 +38,7 @@ public class TextFeed : MonoBehaviour
             // TRIGGER FPS HERE
             Debug.Log("FPS TRIGGERED");
         }
-        
-        if (currentDialogue.options[option].isWinningChoice)
+        else if (currentDialogue.options[option].isWinningChoice)
         {
             Debug.Log("IS WINNING CHOICE");
             survivedScreen.gameObject.SetActive(true);
