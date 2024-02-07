@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2cdf6271dea47f0a864825fab438f3, type: 3}
   m_Name: do you hate me
   m_EditorClassIdentifier: 
-  dialogueText: playerName, do you just hate me or something?
+  dialogueText: player1, do you just hate me or something?
   options:
   - optionText: Yes. You literally won't stop talking to me. STOP.
     response: {fileID: 0}

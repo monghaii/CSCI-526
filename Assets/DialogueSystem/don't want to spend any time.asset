@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a2cdf6271dea47f0a864825fab438f3, type: 3}
   m_Name: don't want to spend any time
   m_EditorClassIdentifier: 
-  dialogueText: playerName, it seems like you really don't want to spend any time
-    with me. Is that true?
+  dialogueText: player1, it seems like you really don't want to spend any time with
+    me. Is that true?
   options:
   - optionText: I have been trying to get you to go away this whole time.
     response: {fileID: 0}
