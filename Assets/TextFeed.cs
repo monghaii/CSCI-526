@@ -12,6 +12,7 @@ public class TextFeed : MonoBehaviour
     [SerializeField] public TextMeshProUGUI option4;
     [SerializeField] public GameObject survivedScreen;
     [SerializeField] public GameObject failedScreen;
+    public GameManager gameManager;
     
     
     
@@ -37,6 +38,7 @@ public class TextFeed : MonoBehaviour
         {
             // TRIGGER FPS HERE
             Debug.Log("FPS TRIGGERED");
+            gameManager.StartFPS();
         }
         else if (currentDialogue.options[option].isWinningChoice)
         {
