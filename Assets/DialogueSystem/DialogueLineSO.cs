@@ -1,4 +1,3 @@
-using UnityEditor.Search;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Dialogue Line", menuName = "Dialogue System/Dialogue Line")]
